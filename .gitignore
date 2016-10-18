@@ -30,3 +30,4 @@
 
 cache
 .ipynb_checkpoints
+*.DSYM

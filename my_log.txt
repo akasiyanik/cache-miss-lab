@@ -1,0 +1,83 @@
+n = 1023
+cache size 32768 B
+channels 8
+cacheLineSize 64 B
+totalLinesInCache 512
+linesInChannel 64
+timeSimple: 277.463
+TOTAL 3211797501
+HIT 2074209735
+MISS 1137587766
+MISS % 35.419
+
+n = 1024
+cache size 32768 B
+channels 8
+cacheLineSize 64 B
+totalLinesInCache 512
+linesInChannel 64
+timeSimple: 305.574
+TOTAL 3221225472
+HIT 2146240512
+MISS 1074984960
+MISS % 33.3719
+
+n = 1025
+cache size 32768 B
+channels 8
+cacheLineSize 64 B
+totalLinesInCache 512
+linesInChannel 64
+timeSimple: 265.091
+TOTAL 3230671875
+HIT 2086269117
+MISS 1144402758
+MISS % 35.4231
+
+n = 1040
+cache size 32768 B
+channels 8
+cacheLineSize 64 B
+totalLinesInCache 512
+linesInChannel 64
+timeSimple: 288.787
+TOTAL 3374592000
+HIT 2179356400
+MISS 1195235600
+MISS % 35.4187
+
+n = 1041
+cache size 32768 B
+channels 8
+cacheLineSize 64 B
+totalLinesInCache 512
+linesInChannel 64
+timeSimple: 308.803
+TOTAL 3384335763
+HIT 2184634140
+MISS 1199701623
+MISS % 35.4487
+
+n = 1050
+cache size 32768 B
+channels 8
+cacheLineSize 64 B
+totalLinesInCache 512
+linesInChannel 64
+timeSimple: 302.22
+TOTAL 3472875000
+HIT 2241865761
+MISS 1231009239
+MISS % 35.4464
+
+n = 1100
+cache size 32768 B
+channels 8
+cacheLineSize 64 B
+totalLinesInCache 512
+linesInChannel 64
+timeSimple: 345.78
+TOTAL 3993000000
+HIT 2577830200
+MISS 1415169800
+MISS % 35.4413

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <random>
-#include <chrono>
 
 using namespace std;
 
@@ -27,7 +26,7 @@ namespace {
             lastAccessTime = new long long[totalLinesInCache];
             for (int i = 0; i < totalLinesInCache; i++) {
                 cache[i] = -1;
-                lastAccessTime[i] = -1;
+                lastAccessTime[i] = 0;
             }
         }
 
@@ -58,18 +57,16 @@ namespace {
         int linesInChannel;
         int totalLinesInCache;
 
+        long long accessCounter = 0;
+
         long long *cache;
         long long *lastAccessTime;
-
-        long long getCurrentTimestamp() {
-            return chrono::system_clock::now().time_since_epoch().count();
-        }
 
         bool isCacheContain(int cacheLineTag, long long cacheLineNumberInMem) {
             for (int i = 0; i < channels; i++) {
                 long n = cacheLineTag * channels + i;
                 if (cache[n] == cacheLineNumberInMem) {
-                    lastAccessTime[n] = getCurrentTimestamp();
+                    lastAccessTime[n] = ++accessCounter;
                     return true;
                 }
             }
@@ -88,7 +85,7 @@ namespace {
             }
 
             cache[lruLineNum] = cacheLineNumberInMem;
-            lastAccessTime[lruLineNum] = getCurrentTimestamp();
+            lastAccessTime[lruLineNum] = ++accessCounter;
         }
 
         long long getCacheLineNumber(long long addrInMem) {

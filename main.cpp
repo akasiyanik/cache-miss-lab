@@ -153,11 +153,12 @@ int main(int argc, char *argv[]) {
         cerr << "TOTAL " << cache.hitCounter + cache.missCounter << endl;
         cerr << "HIT " << cache.hitCounter << endl;
         cerr << "MISS " << cache.missCounter << endl;
-        cerr << "MISS % " << cache.missCounter / (float) (cache.hitCounter + cache.missCounter) << endl;
+        cerr << "MISS % " << (cache.missCounter / (float) (cache.hitCounter + cache.missCounter)) * 100 << endl;
     }
 
     delete[] a;
     delete[] b;
     delete[] c;
 }
+
 

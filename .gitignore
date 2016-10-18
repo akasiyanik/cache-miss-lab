@@ -27,3 +27,6 @@
 *.exe
 *.out
 *.app
+
+cache
+.ipynb_checkpoints
